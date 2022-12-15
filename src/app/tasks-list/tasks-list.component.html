@@ -16,6 +16,7 @@
         <li [@moveInLeft] *ngFor="let itemTask of listTasksTyped">{{itemTask.name}}
           <i (click)="removeTask(itemTask.id)" class="material-icons">delete</i>
           <i (click)="editTask(itemTask.id)" class="material-icons">edit</i>
+          <i class="material-icons" (click)="detailTask(itemTask.id)">visibility</i>
         </li>
       </ul>
     </div>

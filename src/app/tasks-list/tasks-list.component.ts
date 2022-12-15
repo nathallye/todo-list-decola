@@ -36,6 +36,10 @@ export class TasksListComponent {
     this.router.navigate([`editar/${id}`]);
   }
 
+  detailTask(id: number) {
+    console.log(`Detalhar a tarefa com id: ${id}`);
+  }
+
   // sempre remover itens do array de trás pra frente
   removeTask(id: number) {
     for (let i = 0; i < this.listTasksTyped.length; i++) {

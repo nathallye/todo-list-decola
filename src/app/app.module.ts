@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TasksDetailComponent } from './tasks-detail/tasks-detail.component';
 import { TasksListComponent } from './tasks-list/tasks-list.component';
+import { TasksEditComponent } from './tasks-edit/tasks-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     // AppRoutingModule,
     TasksDetailComponent,
-    TasksListComponent
+    TasksListComponent,
+    TasksEditComponent
   ],
   imports: [
     BrowserModule,
