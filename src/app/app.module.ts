@@ -12,7 +12,6 @@ import { TasksEditComponent } from './tasks-edit/tasks-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
-    // AppRoutingModule,
     TasksDetailComponent,
     TasksListComponent,
     TasksEditComponent
@@ -20,6 +19,7 @@ import { TasksEditComponent } from './tasks-edit/tasks-edit.component';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     BrowserAnimationsModule
   ],
   providers: [],

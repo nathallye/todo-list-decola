@@ -22,3 +22,9 @@
     </div>
   </form>
 </div>
+
+<app-tasks-detail
+  *ngIf="screenToDisplay=='detalhe'"
+  [taskToDetail]="taskSelected"
+  [finishPreview]="closeDetail">
+</app-tasks-detail>

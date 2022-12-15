@@ -21,6 +21,10 @@ export class TasksListComponent {
   nameTaskModel: string = '';
   @ViewChild("task") inputNameTask!: ElementRef; // variável inputNameTask é uma referência ao elemento html input com name "task"
 
+  taskSelected!: ITaskDto;
+  screenToDisplay: string = "list";
+  storageInfo!: Storage;
+
   addTask(value: string) {
     // this.arrayTasks.push(value);
     this.listTasksTyped.push({ id: this.idTask, name: value });
@@ -38,6 +42,14 @@ export class TasksListComponent {
 
   detailTask(id: number) {
     console.log(`Detalhar a tarefa com id: ${id}`);
+    this.screenToDisplay = 'detalhe';
+
+    for (let i = 0; i < this.listTasksTyped.length; i++) {
+      if (id == this.listTasksTyped[i].id) {
+        this.taskSelected = this.listTasksTyped[i];
+        break;
+      }
+    }
   }
 
   // sempre remover itens do array de trás pra frente
@@ -55,6 +67,11 @@ export class TasksListComponent {
     console.log(`Valor do formulário: ${JSON.stringify(valueForm)}`);
 
     this.addTask(valueForm.task);
+  }
+
+  public closeDetail = () => {
+    this.screenToDisplay = 'list';
+    // this.listaTarefaTipada= JSON.parse(this.storageInfo.getItem('listaDeTarefas') as string) as ITarefaDto[];
   }
 
   constructor(private router: Router) {

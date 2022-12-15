@@ -16,7 +16,7 @@ export class TasksEditComponent {
   UpdateTask() {
     // atualizar a informação
     // redirecionar para tela de lista
-    this.router.navigate(['lista']);
+    this.router.navigate(['list']);
   }
 
   constructor(private route: ActivatedRoute, private router: Router) {
