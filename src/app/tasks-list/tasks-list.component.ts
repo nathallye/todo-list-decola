@@ -22,7 +22,7 @@ export class TasksListComponent {
   @ViewChild("task") inputNameTask!: ElementRef; // variável inputNameTask é uma referência ao elemento html input com name "task"
 
   taskSelected!: ITaskDto;
-  screenToDisplay: string = "list";
+  screenToDisplay: string = "lista";
   storageInfo!: Storage;
 
   addTask(value: string) {
@@ -70,7 +70,7 @@ export class TasksListComponent {
   }
 
   public closeDetail = () => {
-    this.screenToDisplay = 'list';
+    this.screenToDisplay = 'lista';
     // this.listaTarefaTipada= JSON.parse(this.storageInfo.getItem('listaDeTarefas') as string) as ITarefaDto[];
   }
 

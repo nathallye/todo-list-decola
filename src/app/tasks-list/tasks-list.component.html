@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="screenToDisplay=='lista'">
   <form #formTask="ngForm" (submit)="submitFormTask(formTask.value); formTask.resetForm">
     <div class="form-group">
       <h1 class="text-center">Lista de Tarefas</h1>
@@ -16,7 +16,7 @@
         <li [@moveInLeft] *ngFor="let itemTask of listTasksTyped">{{itemTask.name}}
           <i (click)="removeTask(itemTask.id)" class="material-icons">delete</i>
           <i (click)="editTask(itemTask.id)" class="material-icons">edit</i>
-          <i class="material-icons" (click)="detailTask(itemTask.id)">visibility</i>
+          <i (click)="detailTask(itemTask.id)" class="material-icons">visibility</i>
         </li>
       </ul>
     </div>

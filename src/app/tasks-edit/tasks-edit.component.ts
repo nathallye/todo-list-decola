@@ -1,6 +1,5 @@
-import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { ITaskDto } from './../interfaces/ITaskDto';
 
@@ -13,10 +12,10 @@ import { ITaskDto } from './../interfaces/ITaskDto';
 export class TasksEditComponent {
   taskDto: ITaskDto = { id: 0, name: '' };
 
-  UpdateTask() {
+  editTask() {
     // atualizar a informação
     // redirecionar para tela de lista
-    this.router.navigate(['list']);
+    this.router.navigate(['lista']);
   }
 
   constructor(private route: ActivatedRoute, private router: Router) {
